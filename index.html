@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, user-scalable=1.0"/>
+	<title>Burger</title>
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="./images/icon.ico" type="image/x-icon" />
+	<!-- CSS --> 
+	<link rel="stylesheet" type="text/css" href="./css/styles.css">
+	<!-- Media queries -->
+	<link rel="stylesheet" type="text/css" href="./css/media_queries.css">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+	<!-- Aos -->
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body data-barba="wrapper">
+
+	<div class="init-load">
+		<span>Loading...</span>
+	</div>
+
+	<main class="main" data-barba="container" data-barba-namespace="home">
+
+		<header class="header">
+			<div class="container">
+				<a href="#" class="logo">
+					<img src="./images/logo.svg">
+				</a>
+	
+				<ul class="menu">
+					<li><a href="#hero">Home</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#contact">Contact</a></li>
+					<li><a href="#burguers">Burguers</a></li>
+				</ul>
+	
+				<button type="button" class="burger">
+					<span></span>
+				</button>
+			</div>
+		</header>
+		<section class="hero" id="hero">
+			<div class="container">
+				<!-- Slide container -->
+				<div class="swiper">
+					<div class="swiper-wrapper">
+						<!-- Slides -->
+						<div class="swiper-slide">
+							<div class="box-slide">
+								<div class="texts">
+									<h2>Special burguer</h2>
+									<p>Lorem ipsun dolor sit amet</p>
+								</div>
+								<img src="./images/burges/burger1.png" class="img-slide">
+								<div class="price">
+									<span>R$ 10.99</span>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="box-slide">
+								<div class="texts">
+									<h2>The monster</h2>
+									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+								</div>
+								<img src="./images/burges/burger2.png" class="img-slide">
+								<div class="price">
+									<span>R$ 30.00</span>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="box-slide">
+								<div class="texts">
+									<h2>Super Bacon</h2>
+									<p>Lorem Ipsum is simply dummy text of the printing</p>
+								</div>
+								<img src="./images/burges/burger3.png" class="img-slide">
+								<div class="price">
+									<span>R$ 25.00</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="controls-slide">
+						<div class="swiper-button-prev"></div>
+						<div class="swiper-button-next"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="burgers" id="burgers">
+			<div class="container">
+				<h2 class="title">Our Hamburgers</h2>
+				<div class="row">
+					<div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-duration="2000">
+						<div class="card-burger shadow">
+							<img src="./images/burges/burger-options/burger1.png" alt="">
+							<h4>Simple burguer</h4>
+							<p>Lorem ipsun dolor sit amet</p>
+							<span>R$ 10.00</span>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-duration="2000">
+						<div class="card-burger shadow" >
+							<img src="./images/burges/burger-options/burger2.png" alt="">
+							<h4>X cheddar</h4>
+							<p>Lorem ipsun dolor sit amet</p>
+							<span>R$ 15.00</span>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-duration="2000">
+						<div class="card-burger shadow">
+							<img src="./images/burges/burger-options/burger3.png" alt="">
+							<h4>Buffalo burger</h4>
+							<p>Lorem ipsun dolor sit amet</p>
+							<span>R$ 25.00</span>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-duration="2000">
+						<div class="card-burger shadow">
+							<img src="./images/burges/burger-options/burger4.png" alt="">
+							<h4>Black burger</h4>
+							<p>Lorem ipsun dolor sit amet</p>
+							<span>R$ 25.00</span>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-duration="2000">
+						<div class="card-burger shadow">
+							<img src="./images/burges/burger-options/burger5.png" alt="">
+							<h4>Cheddar burger</h4>
+							<p>Lorem ipsun dolor site amet</p>
+							<span>R$ 20.99</span>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-duration="2000">
+						<div class="card-burger shadow">
+							<img src="./images/burges/burger-options/burger6.png" alt="">
+							<h4>Monster triplo burger</h4>
+							<p>Lorem ipsun dolor site amet</p>
+							<span>R$ 30.00</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section> 
+
+		<section class="about" id="about">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-5 col-12">
+						<h2 class="title" data-aos="fade-right" data-aos-duration="2000">About</h2>
+						<h3 data-aos="fade-right" data-aos-duration="2000">Know our history</h3>
+						<p data-aos="fade-right" data-aos-duration="2000">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+						Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+						when an unknown printer took a galley of type and scrambled it to make a type 
+						specimen book.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="recipes" id="recipes">
+			<div class="container">
+				<h2 class="title">Recipes</h2>
+				<div class="row">
+					<div class="col-lg-4 col-md-6 col-12" data-aos="fade-right" data-aos-duration="2000">
+						<div class="card-burger shadow">
+							<img src="./images/burges/burger-options/burger2.png" alt="">
+
+							<h4>X-Burger cheddar</h4>
+							<p>Lorem ipsun, dolor sit amet consectu</p>
+							<a href="recipe.html" class="btn">View more</a>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-duration="2000">
+						<div class="card-burger shadow">
+							<img src="./images/burges/recipes/barbecue.jpg" alt="">
+							
+							<h4>Barbecue sauce</h4>
+							<p>Lorem ipsun, dolor sit amet consectu</p>
+							<a href="recipe.html" class="btn">View more</a>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 col-12" data-aos="fade-left" data-aos-duration="2000">
+						<div class="card-burger shadow">
+							<img src="./images/burges/recipes/maionese.jpg" alt="">
+
+							<h4>Seasoned mayonnaise</h4>
+							<p>Lorem ipsun, dolor sit amet consectu</p>
+							<a href="recipe.html" class="btn">View more</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="contact">
+			<div class="container">
+				<h2 class="title">Contact</h2>
+				<div class="row">
+					<div class="col-lg-6">
+						<form action="">
+							<input type="text" placeholder="Name">
+							<input type="email" placeholder="Email">
+							<textarea placeholder="Message"></textarea>
+							<button class="btn" type="submit">Send</button>
+						</form>
+					</div>
+					<div class="col-lg-6">
+						<div class="embed-responsive embed-responsive-16by9">
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63753
+							.617900350364!2d-41.76568287629179!3d-2.930402083028617!2m3!1f0!2f0!3f0!
+							3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ec3adcd5926c75%3A0x45351f9daa75bb92
+							!2zUGFybmHDrWJhLCBQSQ!5e0!3m2!1spt-BR!2sbr!4v1673653802390!5m2!1spt-BR!2
+							sbr" width="100%" height="400" style="border:0;" allowfullscreen="" 
+							loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</main>
+
+	<footer class="footer">
+		<div class="container footer-infor">
+			<div class="logo-rodape">
+				<img src="./images/logo-rodape.png">
+			</div>
+			<div class="icons">
+				<a href="https://www.linkedin.com/in/emanuel-azevedo-7668b91b7/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+				<a href="https://github.com/nashEm8" target="_blank"><i class="fa-brands fa-github"></i></a>
+				<a href="https://www.instagram.com/emanuel_azevedo82018/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+				<a href="https://www.emanuelazevedo.com.br" target="_blank"><i class="fa-solid fa-globe"></i></a>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Font awesome -->
+	<script src="https://kit.fontawesome.com/ed794436c1.js"></script>
+	<!-- Barba js -->
+	<script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
+	<!-- GSAP -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+	<!-- Swiper --> 
+	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+	<!-- Aos -->
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<!-- Bootstrap --> 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js" integrity="sha512-1/RvZTcCDEUjY/CypiMz+iqqtaoQfAITmNSJY17Myp4Ms5mdxPS5UV7iOfdZoxcGhzFbOm6sntTKJppjvuhg4g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<!-- Js -->
+	<script src="./js/script.js"></script>
+</body>
+</html>
