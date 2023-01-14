@@ -1,0 +1,616 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+:root{
+	--colorTitle: #e1243b;
+	--bg-geral: #e1243b;
+	--fontWeight: 900;
+	--colorWhite: #fff;
+}
+
+body{
+	background-color: var(--colorWhite);
+	color: #212121;
+	font-size: 14px;
+	overflow-x: hidden;
+}
+
+section{
+	width: 100%;
+	padding: 60px 0;
+	position: relative;
+}	
+
+.title{
+	display: block;
+	color: var(--colorTitle);
+	font-weight: var(--fontWeight);
+	font-size: 44px;
+	text-transform: uppercase;
+	margin: 0 0 30px 0;
+}
+
+/* -- -- -- -- -- -- -- -- -- Init load -- -- -- -- -- -- -- -- -- -- -- --*/
+
+.init-load{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	background-color: var(--bg-geral);
+	top: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 999;
+}
+
+.init-load span{
+	color: var(--colorWhite);
+	font-weight: var(--fontWeight);
+	text-transform: uppercase;
+	font-size: 18px;
+	animation: loading 1s infinite;
+}
+
+@keyframes loading{
+	from{opacity: 0;}
+	to{opacity: 1;}
+}
+
+/* -- -- -- -- -- -- -- -- -- Header -- -- -- -- -- -- -- -- -- -- -- --*/
+
+.header{
+	display: flex;
+	align-items: center;
+	position: absolute;
+	width: 100%;
+	height: 100px;
+	top: 0;
+	left: 0;
+	z-index: 99;
+}
+
+.header .container{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header .logo{
+	display: block;
+}
+
+.header .logo img{
+	height: 80px;
+}
+
+.header .burger{
+	display: none;
+}
+
+.header .menu{
+	display: flex;
+	align-items: center;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.header .menu a{
+	display: block;
+	position: relative;
+	text-transform: uppercase;
+	margin-left: 20px;
+	padding-bottom: 5px;
+	color: var(--colorWhite);
+	font-weight: 700;
+	text-decoration: none;
+	transition: all .4s ease;
+}
+
+.header .menu a::after{
+	position: absolute;
+	content: "";
+	width: 0;
+	height: 2px;
+	bottom: 0;
+	left: 0;
+	transition: all .4s ease;
+}
+
+.header .menu a:hover::after{
+	width: 100%;
+}
+
+/* -- -- -- -- -- -- -- -- -- Hero -- -- -- -- -- -- -- -- -- -- -- --*/
+.hero{
+	min-height: 100vh;
+	padding: 0;
+}
+
+.hero .container{
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+}
+
+.hero::before,
+.hero::after{
+	position: absolute;
+	content: "";
+	width: 50%;
+	height: 100%;
+	top: 0;
+}
+
+.hero::before{
+	left: 0;
+}
+
+.hero::after{
+	background-color: var(--bg-geral);
+	right: 0;
+}
+
+/* -- -- -- -- -- -- -- -- -- Slide -- -- -- -- -- -- -- -- -- -- -- --*/
+
+.hero .swiper{
+	width: 100%;
+	overflow: inherit;
+}
+
+.hero .swiper .swiper-slide,
+.hero .swiper .swiper-slide-prev{
+	opacity: 0!important;
+}
+
+.hero .swiper .swiper-slide-active{
+	opacity: 1!important;
+}
+
+.hero .swiper .box-slide{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.hero .swiper .box-slide .texts{
+	width: 25%;
+	padding-right: 30px;
+}
+
+.hero .swiper .box-slide .img-slide{
+	width: 50%;
+}
+
+.hero .swiper .box-slide .price{
+	display: flex;
+	justify-content: flex-end;
+	width: 25%;
+	padding-left: 30px;
+}
+
+.hero .swiper .controls-slide{
+	position: absolute;
+	width: 100%;
+	left: 0;
+	bottom: -60px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0.7;
+}
+
+.hero .swiper .swiper-button-prev,
+.hero .swiper .swiper-button-next{
+	position: relative;
+	width: 50px;
+	height: 50px;
+	background: #8b4513;
+	margin: 0 20px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+.hero .swiper .swiper-button-prev::after,
+.hero .swiper .swiper-button-next::after{
+	font-size: 20px;
+	color: var(--colorWhite);
+}
+
+.hero .swiper .box-slide .texts h2{
+	color: var(--bg-geral);
+	font-weight: var(--fontWeight);
+	font-size: 56px;
+	text-transform: uppercase;
+	margin: 0 0 15px 0;
+}
+
+.hero .swiper .box-slide .texts p{
+	color: #8b4513;
+	font-weight: bold;
+	font-size: 18px;
+	margin: 0 0 15px 0;
+}
+
+.hero .swiper .box-slide .price span{
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	background-color: var(--colorWhite);
+	color: var(--bg-geral);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 36px;
+	font-weight: var(--fontWeight);
+	box-shadow: 1px 1px 27px 4px rgba(0, 0, 0, 0.34);
+}
+
+/* -- -- -- -- -- -- -- -- -- Burgers -- -- -- -- -- -- -- -- -- -- -- --*/
+
+.burgers{
+	background-color: #f8f8f8;
+}
+
+.burgers .title{
+	text-align: center;
+	margin-bottom: 60px;
+}
+
+.burgers .card-burger{
+	margin-bottom: 30px;
+	border-radius: 6px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 30px 15px;
+	transition: all .4s ease;
+}
+
+.burgers .card-burger img{
+	object-fit: cover;
+	width: 160px;
+	height: 160px;
+	border-radius: 50%;
+	border: 2px solid var(--bg-geral);
+	margin: 0 0 30px 0;
+	transition: all .4s ease;
+}
+
+.burgers .card-burger h4{
+	font-size: 22px;
+	font-weight: var(--fontWeight);
+	text-transform: uppercase;
+	color: #e1243b;
+	margin: 0 0 5px 0;
+	transition: all .4s ease;
+}
+
+.burgers .card-burger p{
+	font-size: 16px;
+	font-weight: normal;
+	color: #8b4513;
+	margin: 0 0 15px 0;
+	text-align: center;
+	transition: all .4s ease;
+}
+
+.burgers .card-burger span{
+	width: 160px;
+	height: 50px;
+	border-radius: 50px;
+	background-color: var(--bg-geral);
+	color: var(--colorWhite);
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 22px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all .4s ease;
+	cursor: pointer;
+}
+
+.burgers .card-burger:hover{
+	background-color: var(--bg-geral);
+}
+
+.burgers .card-burger:hover img{
+	border-color: var(--colorWhite);
+}
+
+.burgers .card-burger:hover h4, 
+.burgers .card-burger:hover p{
+	color: var(--colorWhite);
+}
+
+.burgers .card-burger:hover span{
+	background-color: var(--colorWhite);
+	color: var(--bg-geral);
+}
+
+/* -- -- -- -- -- -- -- -- -- About -- -- -- -- -- -- -- -- -- -- -- --*/
+
+.about{
+	min-height: 100vh;
+	padding: 0;
+	background-color: #8b4513;
+}
+
+.about::before,
+.about::after{
+	position: absolute;
+	content: "";
+	top: 0;
+	width: 50%;
+	height: 100%;
+	z-index: 1;
+}
+
+.about::before{
+	left: 0;
+	background-color: #8b4513;
+}
+
+.about::after{
+	right: 0;
+	background-image: url('../images/bg-burger/bg-burger.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	mix-blend-mode: hard-light;
+}
+
+.about .container{
+	position: relative;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	z-index: 2;
+}
+
+.about .title{
+	margin-bottom: 60px;
+	color: var(--colorWhite);
+}
+
+.about img{
+	width: 100%;
+}
+
+.about h3{
+	font-size: 24px;
+	font-weight: var(--fontWeight);
+	text-transform: uppercase;
+	color: #fff;
+	margin: 0 0 10px 0;
+}
+
+.about p{
+	font-size: 16px;
+	color: #fff;
+}
+
+/* -- -- -- -- -- -- -- -- -- Recipes -- -- -- -- -- -- -- -- -- -- -- --*/
+
+.recipes{
+	background-color: #f8f8f8;
+}
+
+.recipes .title{
+	text-align: center;
+	margin-bottom: 60px;
+}
+
+.recipes .card-burger{
+	margin-bottom: 30px;
+	border-radius: 6px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 30px 15px;
+	transition: all .4s ease;
+}
+
+.recipes .card-burger img{
+	object-fit: cover;
+	width: 160px;
+	height: 160px;
+	border-radius: 50%;
+	border: 2px solid var(--bg-geral);
+	margin: 0 0 30px 0;
+	transition: all .4s ease;
+}
+
+.recipes .card-burger h4{
+	font-size: 22px;
+	font-weight: var(--fontWeight);
+	text-transform: uppercase;
+	color: #e1243b;
+	margin: 0 0 5px 0;
+	transition: all .4s ease;
+}
+
+.recipes .card-burger p{
+	font-size: 16px;
+	font-weight: normal;
+	color: #8b4513;
+	margin: 0 0 15px 0;
+	text-align: center;
+	transition: all .4s ease;
+}
+
+.recipes .card-burger a{
+	background-color: var(--bg-geral);
+	border-radius: 20px;
+	padding: 10px 40px;
+	font-weight: 700;
+	color: var(--colorWhite);
+}
+
+.recipes .card-burger:hover{
+	background-color: #e1243b;
+}
+
+.recipes .card-burger:hover img{
+	border-color: var(--colorWhite);
+}
+
+.recipes .card-burger:hover h4,
+.recipes .card-burger:hover p{
+	color: var(--colorWhite);
+}
+
+.recipes .card-burger:hover a{
+	background-color: var(--colorWhite);
+	color: var(--bg-geral);
+}
+
+/* -- -- -- -- -- -- -- -- -- Recipes -- -- -- -- -- -- -- -- -- -- -- --*/
+
+.recipe{
+    width: 100%;
+}
+
+.recipe header{
+    position: relative;
+    width: 100%;
+    height: 450px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.recipe header::after{
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.7);
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+.recipe header .title{
+	position: relative;
+	text-align: center;
+	z-index: 2;
+}
+
+.recipe .content{
+	padding: 60px 0;
+}
+
+.recipe .content p{
+	line-height: 210%;
+}
+
+.recipe .content .back{
+	display: table;
+	margin: 60px auto 0;
+}
+ 
+.recipe .btn{
+	background-color: var(--bg-geral);
+	color: var(--colorWhite);
+	font-size: 14px;
+	text-transform: uppercase;
+	padding: 10px 40px;
+	border-radius: 50px;
+}
+
+.recipe .btn:hover{
+	border: 1px solid #bd1226;
+	background-color: var(--colorWhite);
+	color: #bd1226;
+}
+
+/* -- -- -- -- -- -- -- -- -- Contact -- -- -- -- -- -- -- -- -- -- -- --*/
+
+.contact form input,
+.contact form textarea{
+	width: 100%;
+	height: 44px;
+	border-radius: 6px;
+	background-color: transparent;
+	border: 1px solid var(--bg-geral);
+	outline: none;
+	padding: 0 0 0 15px;
+	margin-bottom: 15px;
+}
+
+.contact form textarea{
+	width: 100%;
+	height: 120px;
+	padding: 15px;
+	border-radius: 6px;
+	background-color: transparent;
+	border: 1px solid var(--bg-geral);
+	outline: none;
+	padding: 15px;
+	color: var(--bg-geral);
+}
+
+.contact form input::placeholder,
+.contact form textarea::placeholder{
+	color: var(--bg-geral);
+}
+
+.contact button{
+	background-color: var(--bg-geral);
+	color: var(--colorWhite);
+	font-weight: var(--fontWeight);
+	font-size: 14px;
+	text-transform: uppercase;
+	padding: 10px 40px;
+	border-radius: 50px;
+}
+
+.contact button:hover{
+	background-color: var(--colorWhite);
+	color: var(--bg-geral);
+	border: 1px solid var(--bg-geral);
+}
+
+/* -- -- -- -- -- -- -- -- -- Rodapé -- -- -- -- -- -- -- -- -- -- -- --*/
+
+footer{
+	background-color: var(--bg-geral);
+}
+
+footer img{
+	color: var(--colorWhite);
+	width: 80px;
+}
+
+.footer-infor{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px 0;
+}
+
+.icons a{
+	color: var(--colorWhite);
+	font-size: 20px;
+	margin-left: 10px;
+}
+
+.icons:hover a{
+	color: var(--colorWhite);
+}
